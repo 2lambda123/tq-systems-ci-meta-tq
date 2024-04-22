@@ -104,7 +104,7 @@ def process(args):
 
     print(commit_msg)
     if not args.dryrun:
-        answer = True if args.yes else query_yes_no(f'\nCreate signed-off-by commit?', default='no')
+        answer = True if args.yes else query_yes_no('\nCreate signed-off-by commit?', default='no')
         if answer == False:
             # Ensure all files are unstaged again
             upper_repo.index.reset()
